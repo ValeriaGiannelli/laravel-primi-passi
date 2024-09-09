@@ -36,22 +36,35 @@
     </div>
 
     <div class="row">
-        <div class="col">
             @if($casi_risolti)
-                <h2>Casi risolti:</h2>
-                <img src="{{$solved}}" alt="">
-                <ul>
-                    @foreach ($casi_risolti as $caso )
-                        <li>{{$caso}}</li>
+                <div class="col-12">
+                    <h2>Casi risolti:</h2>
+                </div>
 
-                    @endforeach
-                </ul>
+                <div class="col-4">
+                    <img src="{{$solved}}" alt="">
+                </div>
+
+                <div class="col-8">
+                    <ul>
+                        @foreach ($casi_risolti as $caso )
+                            <li>{{$caso}}</li>
+
+                        @endforeach
+                    </ul>
+                </div>
+
             @else
-                <h2>Le indagini sono ancora in corso...</h2>
-                <img src="{{$waiting}}" alt="">
-            @endif
+                <div class="col-12">
+                    <h2>Le indagini sono ancora in corso...</h2>
+                </div>
 
-        </div>
+                <div class="col-12">
+                    <img src="{{$waiting}}" alt="">
+                </div>
+
+
+            @endif
     </div>
 </div>
 
