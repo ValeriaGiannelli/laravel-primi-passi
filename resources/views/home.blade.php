@@ -10,13 +10,17 @@
 
     <h1>{{$title}}</h1>
 
-    <h2>Casi risolti:</h2>
-    <ul>
-        @foreach ($casi_risolti as $caso )
-            <li>{{$caso}}</li>
+    @if($casi_risolti)
+        <h2>Casi risolti:</h2>
+        <ul>
+            @foreach ($casi_risolti as $caso )
+                <li>{{$caso}}</li>
 
-        @endforeach
-    </ul>
+            @endforeach
+        </ul>
+    @else
+        <h2>Le indagini sono ancora in corso...</h2>
+    @endif
 
 </body>
 </html>

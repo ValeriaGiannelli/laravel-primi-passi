@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $title = 'La signora in giallo';
-    $casi_risolti = ['Il Mistero di Cabot Cove', 'Un Delitto per Amore', 'Morte nella Cattedrale', 'Il Caso della Spia Scomparsa', 'Il Mistero del Falso Testamento'];
+    // $casi_risolti = ['Il Mistero di Cabot Cove', 'Un Delitto per Amore', 'Morte nella Cattedrale', 'Il Caso della Spia Scomparsa', 'Il Mistero del Falso Testamento'];
+    $casi_risolti = [];
     return view('home', compact('title', 'casi_risolti'));
 });
