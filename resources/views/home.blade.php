@@ -8,7 +8,15 @@
 </head>
 <body>
 
-    <h1>Hello Word</h1>
+    <h1>{{$title}}</h1>
+
+    <h2>Casi risolti:</h2>
+    <ul>
+        @foreach ($casi_risolti as $caso )
+            <li>{{$caso}}</li>
+
+        @endforeach
+    </ul>
 
 </body>
 </html>
